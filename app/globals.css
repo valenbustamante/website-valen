@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/nunito/Nunito-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/nunito/Nunito-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/nunito/Nunito-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/nunito/Nunito-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+article[role="dialog"] {
+  scrollbar-color: var(--blue-slate) var(--vanilla-cream);
+  scrollbar-width: thin;
+}
+article[role="dialog"]::-webkit-scrollbar {
+  width: 13px;
+}
+article[role="dialog"]::-webkit-scrollbar-track {
+  background: var(--vanilla-cream);
+  border: 2px solid var(--blue-slate);
+  border-radius: var(--pill);
+}
+article[role="dialog"]::-webkit-scrollbar-thumb {
+  background: var(--powder-blush);
+  border: 2px solid var(--blue-slate);
+  border-radius: var(--pill);
+}
+body {
+  position: relative;
+  margin: 0;
+  color: var(--ink);
+  background-color: var(--canvas);
+  background-image: radial-gradient(var(--dot-color) 1.2px, transparent 1.2px);
+  background-size: var(--dot-size) var(--dot-size);
+  font-family: var(--font-body);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+}
+.playground-image {
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
+.display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: -0.055em;
+}
+.sketch-card {
+  border: var(--border-width) solid var(--blue-slate);
+  border-radius: var(--radius);
+  box-shadow: 4px 5px 0 var(--blue-slate);
+}
+.marker {
+  display: inline;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0 0.15em;
+}
+.section {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .section {
+    width: min(100% - 28px, 1120px);
+  }
+  .sketch-card {
+    box-shadow: 3px 4px 0 var(--blue-slate);
+  }
+  article[role="dialog"]::-webkit-scrollbar {
+    width: 8px;
+  }
+}
