@@ -69,7 +69,7 @@ export function FunFactPlayground() {
   return (
     <div
       ref={area}
-      className="relative h-72 overflow-visible rounded-[var(--radius)] bg-[var(--vanilla-cream)] p-2 sm:h-80"
+      className="relative h-72 overflow-visible rounded-[var(--radius)] bg-[var(--vanilla-cream)] p-2 sm:h-80 md:h-full md:min-h-80"
     >
       <button
         onClick={reset}

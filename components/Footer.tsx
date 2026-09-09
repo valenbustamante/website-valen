@@ -46,9 +46,6 @@ export function Footer() {
               ? "This page was made with care, curiosity, and a little too much coffee."
               : "Esta página fue hecha con cuidado, curiosidad y un poco de demasiado café."}
           </p>
-          <p className="mt-3 text-xs">
-            © {new Date().getFullYear()} Valentina Bustamante
-          </p>
         </div>
       </motion.div>
     </footer>
