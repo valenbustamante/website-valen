@@ -101,7 +101,7 @@ export function Hero() {
             {es ? "Contacto" : "Contact"}
           </a>
           <a
-            href="https://drive.google.com/file/d/11tRI3qZpEo7hUz4e9uYIgfKSDx319AGb/view?usp=sharing"
+            href="https://drive.google.com/file/d/16IUjuSysRCiuB891LWOJlBkmMg2LyNlS/view?usp=sharing"
             target="_blank"
             className="sketch-card bg-[var(--vanilla-cream)] px-5 py-3 font-bold"
           >

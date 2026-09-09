@@ -33,7 +33,7 @@ export function Navbar() {
           </a>
           <a
             className="rounded-full border-2 border-[var(--blue-slate)] bg-[var(--vanilla-cream)] px-3 py-1.5 sm:px-4 sm:py-2"
-            href="https://drive.google.com/file/d/11tRI3qZpEo7hUz4e9uYIgfKSDx319AGb/view?usp=sharing"
+            href="https://drive.google.com/file/d/16IUjuSysRCiuB891LWOJlBkmMg2LyNlS/view?usp=sharing"
             target="_blank"
             aria-label="Resume"
           >
