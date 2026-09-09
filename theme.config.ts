@@ -8,8 +8,8 @@ export const theme = {
     ink: "#272b35",
   },
   typography: {
-    display: "Nunito, Arial, sans-serif",
-    body: "Nunito, Arial, sans-serif",
+    display: "var(--font-nunito), Arial, sans-serif",
+    body: "var(--font-nunito), Arial, sans-serif",
   },
   borders: {
     width: "2px",

@@ -12,6 +12,7 @@ import {
 } from "../data/projects";
 import { Language, useLanguage } from "./LanguageContext";
 import { ProjectCard } from "./ProjectCard";
+import { publicAsset } from "../lib/assets";
 
 type GalleryItem = (typeof projectExtras)[string]["gallery"][number];
 
@@ -44,7 +45,7 @@ function ProjectGallery({
           aria-label={language === "en" ? "Next image" : "Siguiente imagen"}
         >
           <Image
-            src={image.src}
+            src={publicAsset(image.src)}
             alt={image.caption[language]}
             width={1000}
             height={650}
@@ -76,7 +77,7 @@ function ProjectGallery({
             className={`shrink-0 rounded-xl border-2 p-1 ${index === itemIndex ? "border-[var(--blue-slate)] bg-[var(--powder-blush)]" : "border-transparent"}`}
           >
             <Image
-              src={item.src}
+              src={publicAsset(item.src)}
               alt=""
               width={100}
               height={70}

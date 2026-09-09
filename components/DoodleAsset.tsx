@@ -3,18 +3,19 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { publicAsset } from "../lib/assets";
 const doodles = {
-  star: "/img/doodles/star.png",
-  light: "/img/doodles/light.png",
-  graph: "/img/doodles/line-graph.png",
-  globe: "/img/doodles/globe.png",
-  cloud: "/img/doodles/cloud.png",
-  circles: "/img/doodles/two-circles.png",
-  dots: "/img/doodles/graph-3-dots.png",
-  donut: "/img/doodles/ugly-donut.png",
-  sent: "/img/doodles/message-sent.png",
-  bars: "/img/doodles/bar-plot.png",
-  portrait: "/img/doodles/footer-self-portrait.png",
+  star: publicAsset("/img/doodles/star.png"),
+  light: publicAsset("/img/doodles/light.png"),
+  graph: publicAsset("/img/doodles/line-graph.png"),
+  globe: publicAsset("/img/doodles/globe.png"),
+  cloud: publicAsset("/img/doodles/cloud.png"),
+  circles: publicAsset("/img/doodles/two-circles.png"),
+  dots: publicAsset("/img/doodles/graph-3-dots.png"),
+  donut: publicAsset("/img/doodles/ugly-donut.png"),
+  sent: publicAsset("/img/doodles/message-sent.png"),
+  bars: publicAsset("/img/doodles/bar-plot.png"),
+  portrait: publicAsset("/img/doodles/footer-self-portrait.png"),
 };
 
 const idleMotion: Record<

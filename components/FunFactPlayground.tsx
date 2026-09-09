@@ -3,27 +3,28 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
+import { publicAsset } from "../lib/assets";
 
 type Photo = { src: string; alt: string };
 const photos: Photo[] = [
   {
-    src: "/img/fun-facts/graduation-pic.jpg",
+    src: publicAsset("/img/fun-facts/graduation-pic.jpg"),
     alt: "Valentina at graduation",
   },
   {
-    src: "/img/fun-facts/cheetos-pic.png",
+    src: publicAsset("/img/fun-facts/cheetos-pic.png"),
     alt: "Valentina in a colorful ball pit",
   },
   {
-    src: "/img/fun-facts/plushie-pic.png",
+    src: publicAsset("/img/fun-facts/plushie-pic.png"),
     alt: "Valentina surrounded by plush toys",
   },
   {
-    src: "/img/fun-facts/titan-pic.png",
+    src: publicAsset("/img/fun-facts/titan-pic.png"),
     alt: "Titán",
   },
   {
-    src: "/img/fun-facts/schrodi-pic.png",
+    src: publicAsset("/img/fun-facts/schrodi-pic.png"),
     alt: "Schrodinger",
   },
 ];

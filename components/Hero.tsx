@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { DoodleAsset } from "./DoodleAsset";
 import { useLanguage } from "./LanguageContext";
+import { publicAsset } from "../lib/assets";
 
 export function Hero() {
   const { language } = useLanguage();
@@ -130,7 +131,7 @@ export function Hero() {
               style={{ backfaceVisibility: "hidden" }}
             >
               <Image
-                src="/img/main-pic.png"
+                src={publicAsset("/img/main-pic.png")}
                 alt="Valentina Bustamante"
                 fill
                 priority
