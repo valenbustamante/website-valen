@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { publicAsset } from "../lib/assets";
 
 export function Navbar() {
   const copy = {
@@ -26,7 +27,7 @@ export function Navbar() {
           </Link>
           <a
             className="rounded-full border-2 border-[var(--blue-slate)] bg-[var(--vanilla-cream)] px-3 py-1.5 sm:px-4 sm:py-2"
-            href="/#experience"
+            href={publicAsset("/#experience")}
           >
             {copy.experience}
           </a>

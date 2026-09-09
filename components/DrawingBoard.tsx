@@ -16,6 +16,7 @@ const brushes = [
   { name: "Pencil", value: "pencil" },
   { name: "Marker", value: "marker" },
   { name: "Dots", value: "dots" },
+  { name: "Eraser", value: "eraser" },
 ] as const;
 
 type Brush = (typeof brushes)[number]["value"];
@@ -64,9 +65,11 @@ export function DrawingBoard() {
     event.currentTarget.setPointerCapture(event.pointerId);
     context.beginPath();
     context.moveTo(position.x, position.y);
+    const erasing = brush === "eraser";
+    context.globalCompositeOperation = erasing ? "destination-out" : "source-over";
     context.strokeStyle = color;
     context.globalAlpha = brush === "marker" ? 0.45 : 1;
-    context.lineWidth = brush === "marker" ? 13 : 3;
+    context.lineWidth = erasing ? 22 : brush === "marker" ? 13 : 3;
     context.lineCap = "round";
     if (brush === "dots") {
       context.fillStyle = color;

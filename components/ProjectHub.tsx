@@ -178,7 +178,20 @@ export function ProjectHub({ preview = false }: { preview?: boolean }) {
           animate={{ opacity: 1, y: 0 }}
           className="mt-4 inline-flex items-center gap-2 rounded-full border-2 border-dashed border-[var(--blue-slate)] bg-[var(--vanilla-cream)] px-4 py-2 text-sm font-bold"
         >
-          <span className="animate-pulse text-lg">↗</span>
+          <svg
+            viewBox="0 0 18 18"
+            className="h-5 w-5 animate-pulse"
+            aria-hidden="true"
+          >
+            <path
+              d="M4 14 14 4M8.5 4H14v5.5"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2.25"
+            />
+          </svg>
           {labels.click}
         </motion.p>
       )}
@@ -337,9 +350,23 @@ export function ProjectHub({ preview = false }: { preview?: boolean }) {
                           key={link.label}
                           href={link.href}
                           target="_blank"
-                          className="rounded-full border-2 border-[var(--blue-slate)] bg-[var(--powder-blush)] px-3 py-2 text-sm font-bold"
+                          className="inline-flex items-center gap-2 rounded-full border-2 border-[var(--blue-slate)] bg-[var(--powder-blush)] px-3 py-2 text-sm font-bold"
                         >
-                          {link.label} ↗
+                          {link.label}
+                          <svg
+                            viewBox="0 0 18 18"
+                            className="h-4 w-4"
+                            aria-hidden="true"
+                          >
+                            <path
+                              d="M4 14 14 4M8.5 4H14v5.5"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2.25"
+                            />
+                          </svg>
                         </a>
                       ) : (
                         <span
